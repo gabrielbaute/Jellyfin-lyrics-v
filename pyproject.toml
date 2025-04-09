@@ -1,0 +1,30 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "lyrics-fetcher"
+version = "0.1.0"
+description = "A CLI tool to fetch synced lyrics for audio files using LRCLib."
+authors = [{ name = "Gabriel Baute", email = "gabrielbaute@gmail.com>" }]
+license = { file = "LICENSE" }
+readme = "README.md"  # Archivo de documentación
+keywords = ["lyrics", "console", "LRCLib", "Jellyfin"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+tinytag = "^1.8.0"
+click = "^8.1.7"
+rich = "^13.7.0"
+
+[tool.poetry.scripts]
+lfetcher = "lyrics_fetcher.cli:cli"  # Punto de entrada CLI
+
+[tool.poetry.group.dev.dependencies]  # Dependencias de desarrollo
+pytest = "^7.4.0"
+black = "^23.12.0"
+mypy = "^1.8.0"
+
+[tool.project.urls]
+Homepage = "https://github.com/gabrielbaute/Jellyfin-lyrics-v"
