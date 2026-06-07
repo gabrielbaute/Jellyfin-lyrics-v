@@ -1,0 +1,1 @@
+from lyrics_fetcher.services.lrclib_service import LyricService
